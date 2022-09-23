@@ -1,0 +1,16 @@
+{
+  "doctype-first": false,
+  "html-lang-require": true,
+  "title-require": true,
+  "attr-lowercase": false,
+  "attr-no-duplication": true,
+  "attr-no-unnecessary-whitespace": true,
+  "attr-sorted": true,
+  "attr-whitespace": false,
+  "alt-require": true,
+  "tag-pair": true,
+  "tagname-lowercase": true,
+  "tagname-specialchars": true,
+  "src-not-empty": true,
+  "id-unique": true
+}

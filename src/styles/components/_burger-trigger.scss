@@ -1,0 +1,54 @@
+.burger-trigger {
+  z-index: 101;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: rem(24);
+  gap: rem(7.5);
+
+  &__item {
+    border-radius: rem(4);
+    width: 100%;
+    height: rem(3);
+    background-color: var(--color-mineShaft);
+    transition-property: transform, opacity, visibility, background;
+    transition-duration: $transitionDuration;
+  }
+
+  &.active {
+    .burger-trigger__item {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(rem(8), rem(8));
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100%);
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(rem(7), rem(-7));
+      }
+    }
+  }
+
+  @mixin animation {
+    .burger-trigger__item {
+      background-color: var(--color-endeavourapprox);
+    }
+  }
+
+  /* stylelint-disable-next-line order/order */
+  @include mouse-device {
+    &:hover,
+    &:focus {
+      @include animation;
+    }
+  }
+
+  @include touch-device {
+    &:active {
+      @include animation;
+    }
+  }
+}

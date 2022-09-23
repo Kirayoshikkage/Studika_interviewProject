@@ -1,0 +1,23 @@
+@import '../common/common';
+
+// Vendor
+
+@import '../vendor/simplebar';
+
+// components
+
+@import '../components/form';
+@import '../components/burger-trigger';
+@import '../components/logo';
+@import '../components/widget';
+@import '../components/search';
+@import '../components/liked';
+@import '../components/login';
+@import '../components/navigation';
+@import '../components/filter';
+@import '../components/preloader';
+
+// sections
+
+@import '../section/header';
+@import '../section/burger-menu';

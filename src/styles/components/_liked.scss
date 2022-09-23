@@ -1,0 +1,47 @@
+.liked {
+  display: flex;
+  align-items: center;
+  border-bottom: rem(2) solid transparent;
+  transition: border-color $transitionDuration;
+  gap: rem(4);
+
+  &__icon {
+    width: rem(18);
+    height: rem(18);
+    fill: var(--color-silverChalice);
+    transition: fill $transitionDuration;
+  }
+
+  &__amount {
+    color: var(--color-mineShaft);
+    transition: color $transitionDuration;
+
+    @extend .text-size-xxs;
+  }
+
+  @mixin animation {
+    border-bottom-color: var(--color-endeavourapprox);
+
+    .liked__icon {
+      fill: var(--color-endeavourapprox);
+    }
+
+    .liked__amount {
+      color: var(--color-endeavourapprox);
+    }
+  }
+
+  /* stylelint-disable-next-line order/order */
+  @include mouse-device {
+    &:hover,
+    &:focus {
+      @include animation;
+    }
+  }
+
+  @include touch-device {
+    &:active {
+      @include animation;
+    }
+  }
+}

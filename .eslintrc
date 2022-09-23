@@ -1,0 +1,17 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": ["airbnb/base"],
+  "rules": {
+    "no-underscore-dangle": "off",
+    "class-methods-use-this": "off",
+    "eqeqeq": "off",
+    "import/extensions": ["off", "always"]
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  }
+}

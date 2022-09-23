@@ -1,0 +1,30 @@
+.navigation {
+  transform: translateX(rem(-10));
+
+  &__link {
+    padding: rem(2.5) rem(10);
+    color: var(--color-mineShaft);
+    transition: color $transitionDuration;
+
+    @extend .text-size-xxs;
+    @extend .outline-reset;
+
+    @mixin animation {
+      color: var(--color-endeavourapprox);
+    }
+
+    /* stylelint-disable-next-line order/order */
+    @include mouse-device {
+      &:hover,
+      &:focus {
+        @include animation;
+      }
+    }
+
+    @include touch-device {
+      &:active {
+        @include animation;
+      }
+    }
+  }
+}

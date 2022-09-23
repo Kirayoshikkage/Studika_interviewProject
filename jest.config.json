@@ -1,0 +1,9 @@
+{
+  "clearMocks": true,
+  "collectCoverageFrom": ["src/**/*.js"],
+  "moduleFileExtensions": ["js"],
+  "testMatch": ["src/**/*.js?(x)", "**/?(*.)+(test).js?(x)"],
+  "testPathIgnorePatterns": ["\\\\node_modules\\\\"],
+  "transformIgnorePatterns": ["<rootDir>/node_modules/"],
+  "transform": {}
+}

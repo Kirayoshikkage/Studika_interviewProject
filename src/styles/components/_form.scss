@@ -1,0 +1,51 @@
+.form {
+  &__input {
+    border: rem(2) solid transparent;
+    border-radius: rem(100);
+    width: 100%;
+    color: var(--color-boulder);
+
+    @extend .input-reset;
+    @extend .text-size-xxs;
+
+    /* stylelint-disable-next-line order/order */
+    &_background {
+      background-color: var(--color-seashell);
+    }
+
+    &_border {
+      border: rem(2) solid var(--color-spindleapprox);
+    }
+
+    &_animation {
+      transition-property: background, border-color;
+      transition-duration: $transitionDuration;
+
+      @mixin animation {
+        border-color: rgba(6, 86, 180, 50%);
+        background-color: rgba(6, 86, 180, 20%);
+      }
+
+      /* stylelint-disable-next-line order/order */
+      @include mouse-device {
+        &:hover,
+        &:focus {
+          @include animation;
+        }
+      }
+
+      @include touch-device {
+        &:focus {
+          @include animation;
+        }
+      }
+    }
+
+    &::placeholder {
+      font-size: inherit;
+      line-height: inherit;
+      text-overflow: ellipsis;
+      color: inherit;
+    }
+  }
+}

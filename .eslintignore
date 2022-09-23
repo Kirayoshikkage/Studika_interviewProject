@@ -1,0 +1,7 @@
+/node_modules
+/.vscode
+/.git
+/build
+/tests
+gulpfile.js
+*.cy.js

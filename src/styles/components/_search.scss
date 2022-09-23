@@ -1,0 +1,38 @@
+.search {
+  position: relative;
+
+  .form__submit {
+    position: absolute;
+    left: rem(16);
+    top: rem(16);
+    width: rem(17);
+    height: rem(17);
+
+    @mixin animation {
+      .form__icon {
+        fill: var(--color-endeavourapprox);
+      }
+    }
+
+    /* stylelint-disable-next-line order/order */
+    @include mouse-device {
+      &:hover,
+      &:focus {
+        @include animation;
+      }
+    }
+
+    @include touch-device {
+      &:active {
+        @include animation;
+      }
+    }
+  }
+
+  .form__icon {
+    width: 100%;
+    height: 100%;
+    fill: var(--color-silverChalice);
+    transition: fill $transitionDuration;
+  }
+}

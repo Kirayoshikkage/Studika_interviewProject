@@ -1,0 +1,41 @@
+.login {
+  display: flex;
+  align-items: center;
+  border-bottom: rem(2) solid transparent;
+  transition: border-color $transitionDuration;
+  gap: rem(10);
+
+  &__name {
+    color: var(--color-mineShaft);
+    transition: color $transitionDuration;
+
+    @extend .text-size-xxs;
+  }
+
+  &__avatar {
+    width: rem(32);
+    height: rem(32);
+  }
+
+  @mixin animation {
+    border-bottom-color: var(--color-endeavourapprox);
+
+    .login__name {
+      color: var(--color-endeavourapprox);
+    }
+  }
+
+  /* stylelint-disable-next-line order/order */
+  @include mouse-device {
+    &:hover,
+    &:focus {
+      @include animation;
+    }
+  }
+
+  @include touch-device {
+    &:active {
+      @include animation;
+    }
+  }
+}
